@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+
+		<title>medium-editor-textcolor</title>
+
+		<link rel="stylesheet" href="./bower_components/medium-editor/dist/css/medium-editor.min.css" />
+		<link rel="stylesheet" href="./bower_components/medium-editor/dist/css/themes/default.min.css" />
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+		<!-- Custom styles for this template -->
+		<link href="./css/cover.css" rel="stylesheet" />
+	</head>
+
+	<body class="text-center">
+		<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+			<header class="masthead mb-auto">
+				<div class="inner">
+					<h3 class="masthead-brand">Medium-Editor-Textcolor</h3>
+					<nav class="nav nav-masthead justify-content-center">
+						<a class="nav-link active" href="#">Home</a>
+					</nav>
+				</div>
+			</header>
+
+			<main role="main" class="inner cover editable">
+				<h1 class="cover-heading">Cover your page.</h1>
+				<p class="lead">
+					Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add
+					your own fullscreen background photo to make it your own.
+				</p>
+				<p class="lead">
+					<a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+				</p>
+			</main>
+
+			<footer class="mastfoot mt-auto">
+				<div class="inner">
+					<p>
+						Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by
+						<a href="https://twitter.com/mdo">@mdo</a>.
+					</p>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./bower_components/medium-editor/dist/js/medium-editor.js"></script>
+
+		<script src="./js/medium-editor-textcolor.umd.min.js"></script>
+		<script>
+			var editor = new MediumEditor('.editable', {
+				extensions: {
+					colorPicker: mediumtextcolor.createInstance({
+						contentFA: '<i class="fas fa-eye-dropper"></i>'
+					})
+				},
+				buttonLabels: 'fontawesome',
+				toolbar: {
+					diffTop: 5,
+					buttons: [
+						'bold',
+						'italic',
+						'underline',
+						'strikethrough',
+						'anchor',
+						'justifyLeft',
+						'justifyCenter',
+						'justifyRight',
+						'h1',
+						'h2',
+						'h3',
+						'h4',
+						'quote',
+						'orderedlist',
+						'unorderedlist',
+						'indent',
+						'outdent',
+						'textcolor',
+						'removeFormat'
+					]
+					//'superscript','subscript', 'justifyFull','pre','html',
+				}
+			});
+		</script>
+	</body>
+</html>
