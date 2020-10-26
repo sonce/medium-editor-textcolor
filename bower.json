@@ -1,0 +1,34 @@
+{
+  "name": "medium-editor-textcolor",
+  "description": "medium-editor-textcolor",
+  "main": "dist/index.umd.js",
+  "authors": [
+    "ASheng <oiqwys@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "contenteditable",
+    "editor",
+    "medium",
+    "wysiwyg",
+    "text-color"
+  ],
+  "homepage": "https://github.com/sonce/medium-editor-textcolor",
+  "ignore": [
+    "**/.*",
+    ".github",
+    ".vscode",
+    "config",
+    "patches",
+    "node_modules",
+    "bower_components",
+    "test",
+    "package.json",
+    "demo"
+  ],
+  "dependencies": {
+    "medium-editor": "^5.23.3",
+    "bootstrap": "^4.5.3",
+    "font-awesome-5": "^5.15.1"
+  }
+}

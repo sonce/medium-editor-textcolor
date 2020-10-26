@@ -1,0 +1,11 @@
+{
+    "name": "medium-editor-textcolor",
+    "npmname": "medium-editor-textcolor",
+    "umdname": "mediumtextcolor",
+    "username": "ASheng",
+    "type": "ts",
+    "module": "umd,esm,commonjs",
+    "test": "mocha",
+    "lang": "zh",
+    "version": "1.6.0"
+}

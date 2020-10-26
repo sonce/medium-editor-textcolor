@@ -1,0 +1,5 @@
+node_modules
+.nyc_output
+coverage
+.rpt2_cache
+bower_components

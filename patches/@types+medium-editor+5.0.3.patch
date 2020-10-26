@@ -1,0 +1,68 @@
+diff --git a/node_modules/@types/medium-editor/index.d.ts b/node_modules/@types/medium-editor/index.d.ts
+index d5b84f1..eae77d3 100644
+--- a/node_modules/@types/medium-editor/index.d.ts
++++ b/node_modules/@types/medium-editor/index.d.ts
+@@ -11,7 +11,7 @@ declare namespace MediumEditor {
+         destroy(): void;
+         setup(): void;
+         addElements(elements: elementType): void;
+-        removeElements(elements: elementType): void;
++				removeElements(elements: elementType): void;
+ 
+         // Event Functions
+         on(targets: HTMLElement | NodeList, event: string, listener: EventListenerOrEventListenerObject, useCapture: boolean): MediumEditor;
+@@ -59,8 +59,32 @@ declare namespace MediumEditor {
+             revision: number;
+             preRelease: string;
+             toString(): string;
+-        };
+-    }
++				};
++
++				        /**
++         * 是否已经启用
++         */
++        isActive: boolean;
++        extensions: any;
++        selection: any;
++				util: any;
++
++        Extension: MediumEditorExtension;
++
++		}
++
++    interface MediumEditorExtension {
++			new(): MediumEditorExtension;
++			document: Document;
++			base: MediumEditor;
++			win: Window;
++			selectionState: selectionObject;
++			button:HTMLButtonElement,
++			setActive():void,
++			setInactive():void,
++			isActive():boolean,
++			on(element: HTMLElement | HTMLButtonElement, event: string, callback: Function):void;
++	}
+ 
+     export interface CoreOptions {
+         activeButtonClass?: string;
+@@ -108,6 +132,7 @@ declare namespace MediumEditor {
+         previewValueSelector?: string;
+         showWhenToolbarIsVisible?: boolean;
+         showOnEmptyLinks?: boolean;
++        relativeContainer?: HTMLElement;
+     }
+ 
+     export interface PlaceholderOptions {
+@@ -169,9 +194,9 @@ declare namespace MediumEditor {
+         contentFA?: string;
+         classList?: string[];
+         attrs?: { [key: string]: string };
+-    }
++		}
+ 
+-    export type Button = string | ButtonOptions;
++		export type Button = string | ButtonOptions;
+     export type elementType = string | HTMLElement | HTMLElement[] | NodeList | NodeListOf<Element> | HTMLCollection;
+     export interface selectionObject {
+         start: number;
