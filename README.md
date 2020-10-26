@@ -9,6 +9,8 @@
 
 MediumEditor Text Color is an extension to add a Color Picker button/behavior to MediumEditor.
 
+![Medium Editor TextColor](https://raw.githubusercontent.com/sonce/medium-editor-textcolor/master/demo/images/ui.jpg "TextColor")
+
 Demo: http://sonce.github.io/medium-editor-textcolor/
 
 ## Usage
